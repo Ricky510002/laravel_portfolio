@@ -15,16 +15,24 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('file_name');
-            $table->string("file_path");
+            $table->unsignedBigInteger('user_id');
 
-            // $table->string("item_title");
-            // $table->integer("price");
-            // $table->text("item_explanation");
-            // $table->string("item_state");
-            // $table->string("school_name");
-            // $table->integer("shipping");
-            // $table->string("from_where");
+            $table->string('file_name')->nullable();
+            $table->string("file_path")->nullable();
+
+            $table->string("item_title");
+            $table->integer("price");
+            $table->text("item_explanation");
+            $table->string("item_state");
+            $table->string("school_name")->nullable();
+            $table->integer("shipping");
+            $table->string("from_where");
+            
+            $table->unsignedBigInteger("buyer_id")->nullable();
+            $table->dateTime("sold_check")->nullable();
+            
+
+
 
             $table->timestamps();
 

@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::get('/request', 'ChatController@sendReqest'); 
+
+Route::get('/ajax/chat', 'Ajax\ChatController@index'); // メッセージ一覧を取得
+Route::post('/ajax/chat', 'Ajax\ChatController@create'); // メッセージ送信
+

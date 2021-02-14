@@ -28,6 +28,11 @@ class UsersTableSeeder extends Seeder
         foreach ($dataSet as $data) {
             User::create($data);
         }
+
+        //factory(User::class, 10)->create();
+
     }
 
+
+    
 }

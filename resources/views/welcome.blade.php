@@ -75,13 +75,14 @@
 </head>
 
 <body>
-        <div class="flex-center position-ref full-height">
+      <nav class=" navbar navbar-light bg-info" style="height: 65px" >
+        
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                     <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -89,45 +90,84 @@
                     @endauth
                 </div>
             @endif
+        
+     </nav>
     
-
-
-            <div class="content">
-                <div class="title m-b-md">
-                        タイトル
+            <div class="container-fluid h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="display-1">Book Match</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">さっそく始める</a>
+                    </div>
                 </div>
-            </div>    
-        </div>
+            </div>
+
+
+            <div class="container-fluid h-100 bg-danger">
+                <div class="row h-100 align-items-center justify-content-center text-center">   
+                    <div class="card">
+                        <div class="card-header">
+                            Book Matchとは？
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
 
     <div id="app">
-       
        <main class="py-4">
-            <div class="container">
+            <div class="container h-100 bg-info">
                 <div class="row justify-content-center">
-                    <div class="col-md-11"> 
-
-                        <div class="container">
-                            <div class="row">
-
-                            @foreach($images as $image)
+                    
+                            @foreach($items as $item)
                                 <div class="col-md-3" >
                                 <div class="card" style="width: 15rem; margin-top: 30px;">
-                                    <img class="bd-placeholder-img card-img-top" width="100%" height="180" src="{{ Storage::url($image->file_path) }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="180" src="{{ Storage::url($item->file_path) }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
                                     <title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%"></text></svg>
                                 
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <h5 class="card-title">{{($item->item_title)}}</h5>
+                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                                     </div>
                                 </div>
                                 </div>
-                                @endforeach
+                            @endforeach
+
+                            <div style='margin-top: 30px'>
+                            {{ $items->links() }}
+                            </div>
+
+                            <div class="container">
+                            <div class="row">
+
+                            <div class="input-group" style="margin-top: 30px">
+                                <form action="/search/" method="GET">
+                                    <input type="text" class="form-control" name="search" value="{{request('search')}}" placeholder="検索">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary">検索</button>
+                                    </span>
+                                </form>
+
+                                <a href="/" class="btn btn-primary">一覧表示へ戻る</a>
+
+                            </div>
+
                                 
 
                             </div>
                         </div>
             
-                    </div>
+                    
                 </div>
             </div>
         </main>
