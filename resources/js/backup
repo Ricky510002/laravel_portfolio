@@ -1,0 +1,34 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+// コンポーネントをインポートする
+import ExampleComponent from './components/ExampleComponent.vue'
+import abc from './components/abc.vue'
+
+// VueRouterプラグインを使用する
+// これによって<RouterView />コンポーネントなどを使うことができる
+Vue.use(VueRouter)
+
+// パスとコンポーネントのマッピング
+const routes = [
+  {
+    path: '/sample',
+    name: 'sample',
+    component: ExampleComponent
+  },
+  {
+    path: '/abc',
+    component: abc
+  }
+  
+]
+
+// VueRouterインスタンスを作成する
+const router = new VueRouter({
+  mode: 'history',
+  routes
+})
+
+// VueRouterインスタンスをエクスポートする
+// app.jsでインポートするため
+export default router
