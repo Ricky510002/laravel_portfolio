@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::get('/request', 'ChatController@sendReqest'); 
 
-Route::get('/ajax/chat', 'Ajax\ChatController@index'); // メッセージ一覧を取得
-Route::post('/ajax/chat', 'Ajax\ChatController@create'); // メッセージ送信
+Route::get('/ajax/chat/{id}', 'Ajax\ChatController@getMessages'); // 自分のメッセージを取得
+//Route::get('/ajax/chat/you/{id}', 'Ajax\ChatController@getYourMessages'); // 相手のメッセージを取得
+Route::post('/ajax/chat/{id}', 'Ajax\ChatController@create'); // メッセージ送信
 

@@ -25,7 +25,7 @@ class CreateItemsTable extends Migration
             $table->text("item_explanation");
             $table->string("item_state");
             $table->string("school_name")->nullable();
-            $table->integer("shipping");
+            $table->string("shipping");
             $table->string("from_where");
             
             $table->unsignedBigInteger("buyer_id")->nullable();

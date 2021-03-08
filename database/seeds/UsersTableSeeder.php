@@ -12,22 +12,22 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $dataSet = [
-            [
-                'name' => 'トム',
-                'email' => 'tom@example.com',
-                'password' => bcrypt('password'),
-            ],
-            [
-                'name' => 'ジェリー',
-                'email' => 'jerry@example.com',
-                'password' => bcrypt('password'),
-            ],
-        ];
+        // $dataSet = [
+        //     [
+        //         'name' => 'トム',
+        //         'email' => 'tom@example.com',
+        //         'password' => bcrypt('password'),
+        //     ],
+        //     [
+        //         'name' => 'ジェリー',
+        //         'email' => 'jerry@example.com',
+        //         'password' => bcrypt('password'),
+        //     ],
+        // ];
 
-        foreach ($dataSet as $data) {
-            User::create($data);
-        }
+        // foreach ($dataSet as $data) {
+        //     User::create($data);
+        // }
 
         //factory(User::class, 10)->create();
 

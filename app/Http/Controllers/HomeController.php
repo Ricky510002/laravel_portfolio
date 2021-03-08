@@ -27,15 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users_univ = Auth::user()->univ;
+        $items = Items::orderBy("id", "desc")->paginate(12);
+
+        $user_univ = Auth::user()->univ;
+
+       
+        $recommend_items = Items::where('school_name', $user_univ)->paginate(12);
         
-        if (isset($users_univ)){
-            $items = Items::where('school_name', $users_univ)->paginate(12);
-        }else{
-            $items = Items::orderBy("id", "desc")->paginate(12);
-        }
-    
-        return view("home",["items" => $items]);
+        return view("home",["items" => $items, "recommend_items" => $recommend_items, "user_univ" => $user_univ]);
     }
 
 

@@ -24,11 +24,11 @@ class ItemController extends Controller
 					'from_where' => 'required',
 					
 				]);
-				$Items = $request->file('image');
+				$image = $request->file('image');
 			
-				if($Items) {
+				if($image) {
 					//アップロードされた画像を保存する
-					$path = $Items->store('uploads',"public");
+					$path = $image->store('uploads',"public");
 					//画像の保存に成功したらDBに記録する
 					if($path){
 						$item = new Items();
@@ -41,7 +41,8 @@ class ItemController extends Controller
 						$item->school_name = $request->school_name;
 						$item->shipping = $request->shipping;
 						$item->from_where = $request->from_where;
-						$item->file_name = $Items->getClientOriginalName();
+						
+						$item->file_name = $image->getClientOriginalName();
 						$item->file_path = $path;
 
 
@@ -59,22 +60,20 @@ class ItemController extends Controller
 
 		public function detail($id)
 		{
-						
-
 			$item = Items::find($id);
 				
 
 			return view('item_detail',['item' => $item]);
 		}
 
-		public function my_item()
-		{
-			//$items = User::with('itemGet')->get(); 		
-			$items = Items::where('user_id', Auth::user()->id)->get();
-			
+		// public function my_item()
+		// {
+		// 	//$items = User::with('itemGet')->get(); 		
+		// 	$items = Items::where('user_id', Auth::user()->id)->get();
+		
 
-			return view('my_item', ['items' => $items]);
-		}
+		// 	return view('my_item', ['items' => $items]);
+		// }
 
 		public function item_edit($id)
     {
@@ -101,8 +100,8 @@ class ItemController extends Controller
 		public function item_delete(Request $request)
 		{
 		  Items::find($request->id)->delete();
-	
-			return redirect("/my_item");
+	    $id = Auth::user()->id;
+			return redirect("/user/$id");
 		}
 
 
