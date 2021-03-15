@@ -5,8 +5,8 @@ BookMatchとは大学で使わなくなった教科書を売りたい人と大�
 
 ## DEMO
 <img width="1436" alt="BookMatch top画像" src="https://user-images.githubusercontent.com/62085992/111108268-d7b01b80-859b-11eb-9766-cecaaa13b33e.png">
-
-
+<img width="1440" alt="BookMatch Home画像" src="https://user-images.githubusercontent.com/62085992/111108714-c287bc80-859c-11eb-81e7-c0d3a317589d.png">
+<img width="413" alt="BookMatch Home画像　スマホ" src="https://user-images.githubusercontent.com/62085992/111108781-de8b5e00-859c-11eb-87aa-cd4809e792c8.png">
 
 ## Features
 BookMatchのメイン機能
@@ -27,6 +27,7 @@ BookMatchのメイン機能
 - Vue.js
 - Vuetify
 - Bootstrap
+- Stripe
 
 
 
