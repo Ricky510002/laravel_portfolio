@@ -38,7 +38,7 @@
         </div>
 
         <div class="row">
-         <p>{{ ($item->item_explanation) }}</p>
+         <p>{!! nl2br(e($item->item_explanation)) !!}</p>
         </div>
 
         <div class="row justify-content-center">
@@ -69,7 +69,7 @@
                   <li class="list-group-item">教科書使用している大学名：<br>{{ ($item->school_name) }}</li>
                   <li class="list-group-item">商品の状態： {{ ($item->item_state) }}</li>
                   <li class="list-group-item">発送場所：{{ ($item->from_where) }}</li>
-                  <li class="list-group-item" style="min-height:200px;">商品説明<br>{{ ($item->item_explanation) }}</li>
+                  <li class="list-group-item" style="min-height:200px;">商品説明<br>{!! nl2br(e($item->item_explanation)) !!}</li>
                 </ul>
         
         </div>

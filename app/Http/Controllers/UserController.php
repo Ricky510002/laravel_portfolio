@@ -18,6 +18,8 @@ class UserController extends Controller
         $items = Items::where('user_id', $id)->paginate(12);
         $bought_items = Items::where('buyer_id', $id)->paginate(12);
         $was_bought_items = Items::where('user_id',Auth::user()->id)->whereNotNull('sold_check')->paginate(12);
+
+        
 		
         return view('users.show', ['user' => $user, 'items' => $items, 'bought_items' => $bought_items, 'was_bought_items' => $was_bought_items]);
     }

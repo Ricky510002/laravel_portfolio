@@ -49,7 +49,7 @@
 
         <tr class="border-bottom" style="height: 180px;">
           <th scope="row">自己紹介</th>
-          <td colspan="3"><textarea name="profile" cols="30" rows="10" style="white-space: pre-wrap;">{{ $user->profile }}</textarea></td>
+          <td colspan="3"><textarea name="profile" cols="30" rows="10" style="white-space: pre-wrap;">{{  $user->profile  }}</textarea></td>
         </tr>
 
         <tr>

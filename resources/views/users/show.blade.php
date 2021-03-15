@@ -39,7 +39,7 @@
 
         <tr class="border-bottom" style="height: 180px;">
           <th scope="row">自己紹介</th>
-          <td colspan="3">{{ ($user->profile) }}</td>
+          <td colspan="3">{!! nl2br(e($user->profile)) !!}</td>
         </tr>
       </tbody>
     </table>
@@ -63,7 +63,7 @@
         <li class="list-group-item bg-light">{{ ($user->univ) }}</li>
 
         <li class="list-group-item font-weight-bold">自己紹介</li>
-        <li class="list-group-item bg-light" style="height:300px;">{{ ($user->profile) }}</li>
+        <li class="list-group-item bg-light" style="height:300px;">{!! nl2br(e($user->profile)) !!}</li>
        
       </ul>
     </div>
