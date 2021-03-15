@@ -6,7 +6,12 @@ BookMatchとは大学で使わなくなった教科書を売りたい人と大�
 ## DEMO
 <img width="1436" alt="BookMatch top画像" src="https://user-images.githubusercontent.com/62085992/111108268-d7b01b80-859b-11eb-9766-cecaaa13b33e.png">
 <img width="1440" alt="BookMatch Home画像" src="https://user-images.githubusercontent.com/62085992/111108714-c287bc80-859c-11eb-81e7-c0d3a317589d.png">
-<img width="413" alt="BookMatch Home画像　スマホ" src="https://user-images.githubusercontent.com/62085992/111108781-de8b5e00-859c-11eb-87aa-cd4809e792c8.png">
+<img width="413" alt="BookMatch Home画像 スマホ" src="https://user-images.githubusercontent.com/62085992/111108781-de8b5e00-859c-11eb-87aa-cd4809e792c8.png">
+<img width="411" alt="BookMatch 紹介画像" src="https://user-images.githubusercontent.com/62085992/111109366-f44d5300-859d-11eb-8b33-4fe21aae0fea.png">
+<img width="1349" alt="BookMatchメッセージ画像" src="https://user-images.githubusercontent.com/62085992/111109898-ed731000-859e-11eb-9138-73ed0cac6385.png">
+
+
+
 
 ## Features
 BookMatchのメイン機能
