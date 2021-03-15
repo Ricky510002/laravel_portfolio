@@ -4,8 +4,8 @@ BookMatchとは大学で使わなくなった教科書を売りたい人と大�
 
 
 ## DEMO
-XXXXXXのイメージや魅力が伝えるデモ動画やスクリーンショットを載せる
-※GIF形式（1つのファイルに複数の画像データを挿入し簡易的なアニメーション動画を作ることができる形式）の画像をアップするとより直感的に伝わるかもしれません
+<img width="1436" alt="BookMatch top画像" src="https://user-images.githubusercontent.com/62085992/111108268-d7b01b80-859b-11eb-9766-cecaaa13b33e.png">
+
 
 
 ## Features
