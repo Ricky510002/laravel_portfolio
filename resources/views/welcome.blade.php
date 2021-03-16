@@ -384,7 +384,7 @@
 
     <footer class="footer container-fluid bg-dark " style="height: 65px" >
       <div class="row justify-content-center">
-        <p class="text-white mt-3">&copy; Ryuki Goto</p> 
+        <p class="text-white mt-3">&copy; BookMatch</p> 
       </div>
         
     </footer>
