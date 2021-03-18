@@ -19,6 +19,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- ファビコン -->
+    <link rel="bookmatch icon" href="{{ asset('bookmatch.ico') }}">
+
     <!-- Styles -->
     <style>
             html, body {

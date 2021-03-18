@@ -20,6 +20,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="bookmatch icon" href="{{ asset('bookmatch.ico') }}">
+    
 </head>
 <body>
     <div id="app">
