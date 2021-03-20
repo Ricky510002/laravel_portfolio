@@ -38,19 +38,7 @@ class ChatController extends Controller
         return redirect("{$id}/chat");
     }
 
-    // public function sample(){
-    //     //$messages = Message::where('chat_place_id',$id)->get();
-        
-        
-    //     // $item = Items::find($id);
-    //     // $item->sold_check = now();
-    //     // $item->buyer_id= Auth::user()->id;
-    //     // $item->save();
-     
-    //     //return view('messages.chat', ['messages' => $messages, 'item' => $id]);
-    //     return view("sample");
-    // }
-
+    
     
     
 
