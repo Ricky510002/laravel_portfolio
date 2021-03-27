@@ -75,7 +75,7 @@
 
             <div class="container my-5">
                 <div class="row justify-content-center">
-                    <h2>あなたにおすすすめの商品</h2>
+                    <h2>あなたにおすすめの商品</h2>
                 </div>
             </div>
             
