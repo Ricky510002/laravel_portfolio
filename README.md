@@ -43,7 +43,7 @@ BookMatchの主な機能
 
 ## Usage
 
-- http://bookmatch.shopにアクセス
+- http://bookmatch.shop にアクセス
 - デモユーザーでログイン
     - Mail: `taro@example.com`
     - Password: `taro12345`
